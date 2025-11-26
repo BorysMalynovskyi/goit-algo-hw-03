@@ -1,0 +1,26 @@
+[flake8]
+# Allow lines up to 120 chars
+max-line-length = 120
+
+# Ignore rules that conflict with Black or are overly strict
+ignore =
+    E203,  # Whitespace before ':' (Black compatibility)
+    W503,  # Line break before binary operator (Black compatibility)
+    E501,  # Line length handled by max-line-length
+
+# Exclude typical folders
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    .mypy_cache,
+    .pytest_cache,
+    build,
+    dist
+
+# Enable useful optional plugins if installed
+# import-order-style = google
+# application-import-names = your_package
+
+# Show more detailed info in output
+max-complexity = 10
